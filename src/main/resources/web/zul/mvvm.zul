@@ -1,6 +1,6 @@
 <zk>
-        <window title="${labels.mvvm.title}" viewModel="@id('vm') @init('zkGrails4.rest.MainViewModel')">
-            Current Time (from Spring Service):
+        <window title="${labels.mvvm.title}" viewModel="@id('vm') @init('zkgrails4.rest.MainViewModel')">
+            Current Time (from Grails Service):
 
             <hlayout valign="middle">
                 <label value="@load(vm.currentTime)"/>
