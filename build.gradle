@@ -20,6 +20,8 @@ apply plugin:"org.grails.plugins.views-json"
 
 repositories {
     maven { url "https://repo.grails.org/grails/core" }
+    maven { url "https://mavensync.zkoss.org/maven2" }
+    maven { url "https://mavensync.zkoss.org/eval" }
 }
 
 configurations {
@@ -27,6 +29,10 @@ configurations {
     runtimeClasspath {
         extendsFrom developmentOnly
     }
+}
+
+ext {
+    zkspringbootVersion = '1.0.4'
 }
 
 dependencies {
@@ -63,6 +69,8 @@ dependencies {
     testCompile "org.mockito:mockito-core"
     testCompile "io.micronaut:micronaut-http-client"
     testCompile "org.grails:grails-web-testing-support"
+
+    compile "org.zkoss.zkspringboot:zkspringboot-starter:${zkspringbootVersion}"
 }
 
 bootRun {
