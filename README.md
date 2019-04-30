@@ -1,4 +1,4 @@
-"# zkgrails4-rest" 
+# zkgrails4-rest 
 
 Demonstrates ZK with grails. Uses ViewModel and injection of grails services. 
 
