@@ -1,11 +1,11 @@
 <zk>
-        <window title="${labels.mvvm.title}">
+        <window title="${labels.mvvm.title}" viewModel="@id('vm') @init('zkGrails4.rest.MainViewModel')">
             Current Time (from Spring Service):
 
-            <!--<hlayout valign="middle">-->
-                <!--<label value="@load(vm.currentTime)"/>-->
-                <!--<button iconSclass="z-icon-refresh" onClick="@command('updateTime')"/>-->
-            <!--</hlayout>-->
+            <hlayout valign="middle">
+                <label value="@load(vm.currentTime)"/>
+                <button iconSclass="z-icon-refresh" onClick="@command('updateTime')"/>
+            </hlayout>
 
         </window>
 </zk>
