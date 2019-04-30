@@ -1,0 +1,11 @@
+<zk>
+        <window title="${labels.mvvm.title}">
+            Current Time (from Spring Service):
+
+            <!--<hlayout valign="middle">-->
+                <!--<label value="@load(vm.currentTime)"/>-->
+                <!--<button iconSclass="z-icon-refresh" onClick="@command('updateTime')"/>-->
+            <!--</hlayout>-->
+
+        </window>
+</zk>

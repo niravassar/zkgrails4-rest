@@ -22,6 +22,7 @@ repositories {
     maven { url "https://repo.grails.org/grails/core" }
     maven { url "https://mavensync.zkoss.org/maven2" }
     maven { url "https://mavensync.zkoss.org/eval" }
+    maven { url "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" } //for jasper reports
 }
 
 configurations {
@@ -33,6 +34,7 @@ configurations {
 
 ext {
     zkspringbootVersion = '1.0.4'
+    zkVersion = '8.6.0.1-Eval'
 }
 
 dependencies {
@@ -70,7 +72,13 @@ dependencies {
     testCompile "io.micronaut:micronaut-http-client"
     testCompile "org.grails:grails-web-testing-support"
 
+    // Zk dependencies
     compile "org.zkoss.zkspringboot:zkspringboot-starter:${zkspringbootVersion}"
+//    def withoutSlf4J = { exclude group: "org.slf4j", module: "slf4j-jdk14" }
+//    compile "org.zkoss.zk:zkmax:${zkVersion}", withoutSlf4J
+//    compile "org.zkoss.zk:zuti:${zkVersion}", withoutSlf4J
+//    compile "org.zkoss.zk:zkplus:${zkVersion}", withoutSlf4J
+    
 }
 
 bootRun {
